@@ -1,0 +1,27 @@
+.pco-image-wrap {
+	text-align: center;
+	border: 2px dashed #ddd;
+	padding: 10px;
+}
+
+.pco-image {
+	overflow: hidden;
+}
+
+.newimage-section .pco-image-select {
+	width: 100%;
+	height: 36px;
+}
+
+.image-section .image {
+	text-align: center;
+}
+
+.image-section .image img {
+	max-width: 100%;
+}
+
+.image-section .buttons {
+	margin-top: 5px;
+	text-align: left;
+}
