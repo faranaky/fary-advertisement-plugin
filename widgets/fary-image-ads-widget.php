@@ -72,11 +72,10 @@ class fary_image_ads_widget extends WP_Widget {
         $image_width  = isset( $instance['image_url'])    ? $instance['image_url']    : self::DEFAULT_IMAGE_WIDTH;
         $image_height = isset( $instance['image_height']) ? $instance['image_height'] : self::DEFAULT_IMAGE_HEIGHT;
 
-        // Widget admin form
+        // Widget admin form ?>
 
-        $variable = <<<HTML
         <p>
-            <label for="esc_attr($this->get_field_id( 'title' )); "><?php esc_html_e( 'Title:', 'fary-advertisement-plugin' ); ?></label>
+            <label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php esc_html_e( 'Title:', 'fary-advertisement-plugin' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
@@ -96,7 +95,8 @@ class fary_image_ads_widget extends WP_Widget {
             <label for="<?php echo esc_attr($this->get_field_id( 'image_height' )); ?>"><?php esc_html_e( 'Image Height:', 'fary-advertisement-plugin' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'image_height' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'image_height' )); ?>" type="text" value="<?php echo esc_attr( $image_height ); ?>" />
         </p>
-HTML;
+
+    <?php
     }
 
     // Updating widget replacing old instances with new
